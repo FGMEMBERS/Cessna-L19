@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/L19-base.xml">
+
+  <sim>
+
+    <description>Cessna L19 / O1 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <status>Alpha</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>Systems/L19W-yasim</aero>
+
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 2 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+    <model>
+      <path archive="y">Aircraft/Cessna-L19/Models/L19W.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+    
+    <sound>
+      <path>Aircraft/Cessna-L19/Sounds/L19W-sound.xml</path>
+    </sound>
+    
+    <startup>
+      <splash-texture>Aircraft/Cessna-L19/Splashs/L19W-splash.png</splash-texture>
+    </startup>
+    
+    <help include="Systems/L19W-help.xml"/>
+    
+  </sim>
+  
+  <input include="Systems/L19W-keyboard.xml"/>
+  
+</PropertyList>

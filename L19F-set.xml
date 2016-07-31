@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/L19-base.xml">
+  
+  <sim>
+    
+    <description>Cessna L19 / O1 Floats version (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    
+    <status>0.1</status>
+    
+    <flight-model>yasim</flight-model>
+    <aero>Systems/L19F-yasim</aero>
+    
+    <variant-of>L19W</variant-of>
+    
+    <type type="string">seaplane</type>
+
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 2 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+    <model>
+      <path archive="y">Aircraft/Cessna-L19/Models/L19F.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+    
+    <sound>
+      <path>Aircraft/Cessna-L19/Sounds/L19F-sound.xml</path>
+    </sound>
+    
+    <startup>
+      <splash-texture>Aircraft/Cessna-L19/Splashs/L19F-splash.png</splash-texture>
+    </startup>
+    
+    <help include="Systems/L19F-help.xml"/>
+    
+  </sim>
+  
+  <input include="Systems/L19F-keyboard.xml"/>
+  
+</PropertyList>
