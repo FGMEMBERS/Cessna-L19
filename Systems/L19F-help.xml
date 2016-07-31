@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Cessna L19 / O1</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open/Close crew door</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>On/Off Landing light</desc>
+  </key>
+  <key>
+    <name>L</name>
+    <desc>Up/Down floats rudders</desc>
+  </key>
+  
+</PropertyList>

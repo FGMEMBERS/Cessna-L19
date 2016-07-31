@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>floats.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>flotteurs</object-name>
+    <object-name>ailerons</object-name>
+    <object-name>axes</object-name>
+    <object-name>gouvernailG</object-name>
+    <object-name>gouvernailD</object-name>
+    <object-name>attaches</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>flotteurs</object-name>
+    <object-name>ailerons</object-name>
+    <object-name>axes</object-name>
+    <object-name>gouvernailG</object-name>
+    <object-name>gouvernailD</object-name>
+    <object-name>attaches</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>flotteurs</object-name>
+    <object-name>ailerons</object-name>
+    <object-name>axes</object-name>
+    <object-name>gouvernailG</object-name>
+    <object-name>gouvernailD</object-name>
+    <object-name>attaches</object-name>
+  </effect>
+
+  <!-- Trainée gauche -->
+  <model>
+    <path>Aircraft/Cessna-L19/Models/Effects/Wakes/wakeG.xml</path>
+    <offsets>
+      <x-m>  0.76516 </x-m>
+      <y-m> -0.94176 </y-m>
+      <z-m> -1.67195 </z-m>
+      <pitch-deg> -45 </pitch-deg>
+    </offsets>
+  </model> 
+
+  <!-- Trainée droite -->
+  <model>
+    <path>Aircraft/Cessna-L19/Models/Effects/Wakes/wakeD.xml</path>
+    <offsets>
+      <x-m>  0.76516 </x-m>
+      <y-m>  0.94176 </y-m>
+      <z-m> -1.67195 </z-m>
+      <pitch-deg> -45 </pitch-deg>
+    </offsets>
+  </model> 
+
+  <!-- Gouvernes des flotteurs -->
+  <animation>
+    <name>LesGouvernes</name>
+    <object-name>gouvernailG</object-name>
+    <object-name>gouvernailD</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>LesGouvernes</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.gouvernes.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>LesGouvernes</object-name>
+    <property>sim/model/door-positions/gouvernes/position-norm</property>
+    <factor> 120 </factor>
+    <center>
+      <x-m>  0.82681 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.61768 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>gouvernailG</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/door-positions/gouvernes/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m>  0.82681 </x-m>
+      <y-m> -0.94202 </y-m>
+      <z-m> -1.61768 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>gouvernailD</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/door-positions/gouvernes/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m>  0.82681 </x-m>
+      <y-m>  0.94202 </y-m>
+      <z-m> -1.61768 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
