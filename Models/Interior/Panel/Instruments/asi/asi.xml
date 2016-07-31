@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList>
+
+  <path>asi.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Cessna-L19/Models/Effects/glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation> 
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0.000 </ind><dep>   0 </dep></entry> <!--   0 Mph -->
+      <entry><ind> 104.277 </ind><dep> 222 </dep></entry> <!-- 120 Mph -->
+      <entry><ind> 173.795 </ind><dep> 345 </dep></entry> <!-- 200 Mph -->
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y> 
+      <z>  0 </z>
+    </axis>
+  </animation>
+ 
+</PropertyList>

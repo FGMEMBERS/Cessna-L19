@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<PropertyList> 
+
+  <path>oilpressure.ac</path>
+
+  <animation>
+    <!-- Objects Opaques -->
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <!-- Objects Transparents -->
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Cessna-L19/Models/Effects/glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation> 
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine/oil-pressure-psi</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  40 </ind><dep>  57 </dep></entry>
+      <entry><ind>  80 </ind><dep> 112 </dep></entry>
+      <entry><ind> 120 </ind><dep> 167 </dep></entry>
+      <entry><ind> 160 </ind><dep> 220 </dep></entry>
+      <entry><ind> 200 </ind><dep> 270 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
