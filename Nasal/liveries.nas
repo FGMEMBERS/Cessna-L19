@@ -1,1 +1,1 @@
-aircraft.livery.init("Aircraft/Ryan-PT22/Models/Liveries");
+aircraft.livery.init("Aircraft/Cessna-L19/Models/Liveries");
