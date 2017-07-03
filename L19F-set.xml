@@ -23,6 +23,21 @@
       <model type="int">   4 </model>
     </rating>
 
+    <tags>
+      <tag>reconnaissance</tag>
+      <tag>cessna</tag>
+      <tag>1950s</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+      <tag>seaplane</tag>
+      <tag>fixed-gear</tag>
+      <tag>high-wing</tag>
+      <tag>piston</tag>
+      <tag>propeller</tag>
+      <tag>single-engine</tag>
+      <tag>fixed-pitch</tag>
+    </tags>
+
     <model>
       <path archive="y">Aircraft/Cessna-L19/Models/L19F.xml</path>
       <livery>
